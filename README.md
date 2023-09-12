@@ -1,16 +1,17 @@
-# :checkered_flag: NOME DO PROJETO
+# :checkered_flag: Peixiev
 
-Breve descrição do que o seu projeto faz.
+Site de hospedagem de arte. Os usuários podem fazer upload de seus desenhos e pinturas, seguir outros usuários, avaliar com estrelas e favoritar suas obras favoritas. 
 
-## :technologist: Membros da equipe
+## :technologist: Trabalho individual.
 
-Matrícula, nome e curso dos participantes.
+Thales da Silva Félix 494614
+Ciência da Computação 
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-Informe aqui os tipos de usuário que irão interagir com a aplicação. Ex: administrador, locador, locatario, usuário não logado.
-
-> Tenha em mente que obrigatoriamente a aplicação deve possuir funcionalidades acessíveis a todos os tipos de usuário e outra funcionalidades restritas a certos tipos de usuários.
+-Usuário logado: Pode comentar, favoritar, upar desenhos, seguir outros usuários e salvar artes que gostar em sua galeria. Pode ver as postagens de usuário privados que siga.
+-Administrador: Pode fazer o que o usuário faz, mas tem poder de suspender ou banir contas caso haja violação das políticas e termos de uso. Pode ver o que todos os usuários estão postando.
+-Lurker: Só vê o que há disponível ao público, aparece um aviso solicitando que crie uma conta...
 
 ## :spiral_calendar: Entidades ou tabelas do sistema
 

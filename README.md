@@ -9,8 +9,8 @@ Ciência da Computação
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
--Usuário logado: Pode comentar, favoritar, upar desenhos, seguir outros usuários e salvar artes que gostar em sua galeria. Pode ver as postagens de usuário privados que siga.
--Administrador: Pode fazer o que o usuário faz, mas tem poder de suspender ou banir contas caso haja violação das políticas e termos de uso. Pode ver o que todos os usuários estão postando.
+-Usuário logado: Pode comentar, favoritar, upar desenhos, seguir outros usuários e salvar artes que gostar em sua galeria. Pode ver as postagens de usuário privados que siga.<br>
+-Administrador: Pode fazer o que o usuário faz, mas tem poder de suspender ou banir contas caso haja violação das políticas e termos de uso. Pode ver o que todos os usuários estão postando.<br>
 -Lurker: Só vê o que há disponível ao público, aparece um aviso solicitando que crie uma conta...
 
 ## :spiral_calendar: Entidades ou tabelas do sistema

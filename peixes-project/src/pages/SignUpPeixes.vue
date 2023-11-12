@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<template>
+    <!DOCTYPE html>
 <html>
     <head>
         <title> Sign up - Peixes</title>
@@ -42,3 +43,4 @@
         </div>
     </body>
 </html>
+</template>

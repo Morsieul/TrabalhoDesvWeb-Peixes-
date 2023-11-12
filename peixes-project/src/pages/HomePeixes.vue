@@ -1,6 +1,49 @@
+<template>
+        <!DOCTYPE html>
+    <html> 
+        <head>
+            <title>Peixies</title>
+            <meta charset="utf-8">
+            <meta lang = "en-us">
+            <link rel="stylesheet" href="style.css">
+            <link rel="icon" href="imgs/logo.jpg">
+        </head>
+        <body class="base">
+            <header>
+                    <p> Peixies</p>
+                    <!-- <img class="img" src="imgs/logo.jpg" alt ="logo do pirata da hora"> -->
+                    <input type="text" class="search" name="search" placeholder="Pesquise no site">
+                    <nav class ="menu"> 
+                    <div>
+                        <a href = "p_login.html"> Login </a>
+                        <a href = "p_signup.htmL" class = "signup"> Sign up</a>
+                    </div>
+                </nav>
+            </header>
+
+            <section class = "Following">
+                    <h2> Following</h2>
+            </section>
+            <section class = "Recommendation">
+                    <h2> Recommendation</h2>
+            </section>        
+            <footer class = "footer">
+                    <p class ="footer_content">Contato</p>
+                    <ul>
+                        <li>X</li>
+                        <li>Istagram</li>
+                        <li>Facebook</li>
+                    </ul>
+                    <p class="footer_content">Politica de Privacidade</p>
+            </footer>
+        </body>
+    </htmL>
+</template>
+
+<style>
 .base {
     background-color: rgb(51, 51, 51);
-    color: white;
+    color: rgb(48, 48, 48);
     border-radius: 5px;
     padding: 5px;
     margin: auto;
@@ -94,10 +137,6 @@ section {
     background-color: rgb(56, 56, 56);
 }
 
-
-
-
-
 .footer {
     background-color: rgb(194, 204, 201);
     color : black;
@@ -128,3 +167,4 @@ li {
 li:first-child {
     margin-left: -27px;
   }
+</style>

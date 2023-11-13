@@ -28,16 +28,11 @@
                 <i class='bx bxs-lock' style='color:#920909' ></i>
                 <input type="date" placeholder="Date of birth" required>
             </div>
-            <div class = "remember-me">
-                <label>
-                    <input type="checkbox"> Remember me
-                </label>
-            </div>
             <div>
                 <button type="submit" class="button">Sign up</button>
             </div>
             <div>
-                <p>Already have an account? <a href="p_login.html" class="login" >Click here to login!</a></p>
+                <p>Already have an account? <router-link to = "/login">Click here to login!</router-link></p>
             </div>
         </nav>
         </div>

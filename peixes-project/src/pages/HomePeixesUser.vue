@@ -1,0 +1,41 @@
+<template>
+    <!DOCTYPE html>
+<html> 
+    <head>
+        <title>Peixies</title>
+        <meta charset="utf-8">
+        <meta lang = "en-us">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="imgs/logo.jpg">
+    </head>
+    <body class="base">
+        <header>
+                <p> Peixies</p>
+                <!-- <img class="img" src="imgs/logo.jpg" alt ="logo do pirata da hora"> -->
+                <input type="text" class="search" name="search" placeholder="Pesquise no site">
+                <nav class ="menu"> 
+                <div>
+                    <router-link to="/login"> Login</router-link>
+                        <a href = "p_signup.htmL" class = "signup"> Sign up</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class = "Following">
+                <h2> Following</h2>
+        </section>
+        <section class = "Recommendation">
+                <h2> Recommendation</h2>
+        </section>        
+        <footer class = "footer">
+                <p class ="footer_content">Contato</p>
+                <ul>
+                    <li>X</li>
+                    <li>Istagram</li>
+                    <li>Facebook</li>
+                </ul>
+                <p class="footer_content">Politica de Privacidade</p>
+        </footer>
+    </body>
+</htmL>
+</template>

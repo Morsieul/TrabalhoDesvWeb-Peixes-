@@ -19,17 +19,11 @@
                 <input type="password" placeholder="Password" required>
                  <i class='bx bxs-lock' style='color:#920909' ></i>
             </div>
-            <div class = "remember-me">
-                <label>
-                    <input type="checkbox"> Remember me
-                <a href = "#"> Forgot password? </a>
-                </label>
-            </div>
             <div>
                 <button type="submit" class="button">Login</button>
             </div>
             <div>
-                <p>Don't have an account? <a href="p_signup.html" class="signup" >Click here to sign up!</a></p>
+                <p>Don't have an account? <router-link to="/signup" >Click here to sign up!</router-link></p>
             </div>
         </nav>
         </div>
@@ -88,27 +82,6 @@ body {
 
 .input-box i {
     position: absolute;
-}
-
-.wrapper .remember-me {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5px 0;
-}
-
-.remember-me label input {
-    accent-color: rgb(189, 4, 4);
-}
-
-.remember-me a {
-    color: rgb(255, 56, 56);
-    text-decoration: none;
-    
-}
-
-.remember-me a:hover {
-    text-decoration: underline;
 }
 
 .wrapper .button {

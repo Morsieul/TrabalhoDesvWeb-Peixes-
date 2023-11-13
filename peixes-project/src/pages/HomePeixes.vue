@@ -1,3 +1,9 @@
+<!-- <script>
+const isLogado = computed() => {
+    return store.state.isLogado
+}
+</script> -->
+
 <template>
         <!DOCTYPE html>
     <html> 
@@ -15,7 +21,7 @@
                     <input type="text" class="search" name="search" placeholder="Pesquise no site">
                     <nav class ="menu"> 
                     <div>
-                        <a href = "p_login.html"> Login </a>
+                        <a href = "p_login.htmL" class = "login"> Login</a>
                         <a href = "p_signup.htmL" class = "signup"> Sign up</a>
                     </div>
                 </nav>

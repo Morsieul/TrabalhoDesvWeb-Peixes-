@@ -1,22 +1,9 @@
 <template>
-    <!DOCTYPE html>
-<html>
-    <head>
-        <title> Sign up - Peixes</title>
-        <meta charset="utf-8">
-        <meta lang = "pt-br">
-        <link rel="stylesheet" href="login_signup.css">
-        <link rel="icon" href="imgs/logo.jpg">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head>
-    <body>
         <div class="wrapper">
             <h1>Sign up</h1>
         <nav>
             <div class="input-box">
-                <input type="text"  placeholder="Name" required>
-                <i class='bx bxs-user-circle' style='color:#920909' ></i>
-                <input type="text"  placeholder="Last name" required>
+                <input type="text"  placeholder="Display Name" required>
                 <i class='bx bxs-user-circle' style='color:#920909' ></i>
                 <input type="text"  placeholder="Username" required>
                 <i class='bx bxs-user-circle' style='color:#920909' ></i>
@@ -36,6 +23,4 @@
             </div>
         </nav>
         </div>
-    </body>
-</html>
 </template>

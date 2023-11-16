@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pictures",
+  "info": {
+    "singularName": "picture",
+    "pluralName": "pictures",
+    "displayName": "Pictures"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PPictures": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -4,9 +4,7 @@ import LoginPeixes from '../pages/LoginPeixes.vue'
 import SignUpPeixes from '../pages/SignUpPeixes.vue'
 import HomePeixesUser from '../pages/HomePeixesUser.vue'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+const routes = [
     {
        path: '/',
       name: 'home',
@@ -28,6 +26,19 @@ const router = createRouter({
       component: HomePeixesUser
     }
   ]
+
+export const router = createRouter({
+  history: createWebHistory(),
+  routes
 })
 
-export { router } 
+router.beforeEach((to, from) => {
+  const userStore = useUserStore()
+  const user = userStore.user.username
+  const papel = userStore.user.role
+
+  //console.log(`quero ir pra ${to.path}. É protegida? ${to.meta.requireAuth}. Eu sou o ${user} com o papel ${papel}`)
+  if(to.meta.requireAuth && user == null) {
+    return { path: "/login" }
+  }
+})

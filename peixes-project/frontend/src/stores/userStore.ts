@@ -6,7 +6,7 @@ export const useUserStore = defineStore('user', () => {
   const user = ref<User>({} as User)
 
   function logout() {
-    console.log("apagou!!!!")
+    // console.log("apagou!!!!")
     user.value = {} as User
   }
 

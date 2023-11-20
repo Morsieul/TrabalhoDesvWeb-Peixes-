@@ -1,5 +1,5 @@
-// import { baseURL } from '@/api'
+import { baseURL } from '@/api'
 
-// export function getUploadURL(url: string) {
-//   return `${baseURL}${url}`
-// }
+export function getUploadURL(url: string) {
+  return `${baseURL}${url}`
+}

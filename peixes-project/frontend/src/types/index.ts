@@ -7,6 +7,7 @@ export type User = {
   }
 
   export type Comment = {
+    id: string,
   description: string,
   rating: number,
 }

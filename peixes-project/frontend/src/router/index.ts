@@ -3,6 +3,7 @@ import HomePeixes from '../pages/HomePeixes.vue'
 import LoginPeixes from '../pages/LoginPeixes.vue'
 import SignUpPeixes from '../pages/SignUpPeixes.vue'
 import HomePeixesUser from '../pages/HomePeixesUser.vue'
+import { useUserStore } from '@/stores/userStore'
 
 const routes = [
     {

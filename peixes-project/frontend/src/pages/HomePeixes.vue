@@ -1,8 +1,8 @@
-<!-- <script>
-const isLogado = computed() => {
-    return store.state.isLogado
-}
-</script> -->
+<script setup lang="ts">
+import { useUserStore } from '@/stores/userStore'
+
+const userStore = useUserStore()
+</script>
 
 <template>
     <header>
@@ -11,6 +11,7 @@ const isLogado = computed() => {
             <input type="text" class="search" name="search" placeholder="Pesquise no site">
             <nav class ="menu"> 
             <div>
+                <!-- <h4 v-if="userStore.user">{{ userStore.user.username }}></h4> -->
                 <router-link to="/login"> Login</router-link>
                 <router-link to="/signup" class = "signup">Sign Up</router-link>
             </div>

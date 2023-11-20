@@ -1,14 +1,37 @@
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import { AxiosError } from 'axios'
+import { useRouter } from 'vue-router'
+import { authenticationService} from '@/api/Authentication'
+
+const username = ref('')
+const password = ref('')
+const isEmpty = computed(() => username.value.length == 0 || password.value.length == 0)
+const submitted = ref(false)
+const errorMessage = ref('')
+
+const router = useRouter()
+
+async function authenticate() {
+  submitted.value = true
+  try {
+    const user = await authenticationService.login(username.value, password.value)
+    if(user.role == 'admin') {
+      router.push('/admin')
+    } else {
+      router.push('/')
+    }
+  } catch (e) {
+    if(e instanceof AxiosError) {
+      console.log(e.response?.data)
+      errorMessage.value = e.response?.data.error.message
+    } 
+  }
+}
+
+</script>
+
 <template>
-    <!DOCTYPE html>
-<html>
-    <head>
-        <title> Login - Peixes</title>
-        <meta charset="utf-8">
-        <meta lang = "pt-br">
-        <link rel="stylesheet" href="login_signup.css">
-        <link rel="icon" href="imgs/logo.jpg">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head>
     <body>
         <div class="wrapper">
             <h1>Login</h1>
@@ -28,7 +51,6 @@
         </nav>
         </div>
     </body>
-</html>
 </template>
 
 <style>

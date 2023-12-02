@@ -32,25 +32,47 @@ async function authenticate() {
 </script>
 
 <template>
-    <body>
-        <div class="wrapper">
+    <div class="wrapper">
             <h1>Login</h1>
         <nav>
+            <div v-if="errorMessage"  class="alert alert-danger" role="alert">
+                    {{ errorMessage }}
+            </div>
             <div class="input-box">
-                <input type="text"  placeholder="Username" required>
-                <i class='bx bxs-user-circle' style='color:#920909' ></i>
-                <input type="password" placeholder="Password" required>
-                 <i class='bx bxs-lock' style='color:#920909' ></i>
+                <input
+                v-model="username"
+                class="form-control"
+                type="text"  
+                id = "usernameInput"
+                placeholder="Username"
+                required
+                />
+                <div class="invalid-feedback">Forneça um nome de usuário existente.</div>
+                <!-- <i class='bx bxs-user-circle' style='color:#920909' ></i> -->
+                <input 
+                v-model="password"
+                class="form-control"
+                id="passwordInput"
+                type="password" 
+                placeholder="Password" 
+                required>
+                <!-- <i class='bx bxs-lock' style='color:#920909' ></i> -->
+                <div class="invalid-feedback">A senha é um campo obrigatório.</div>
+                
             </div>
             <div>
-                <button type="submit" class="button">Login</button>
+                <input
+                type="submit"
+                class="button"
+                value="Login"
+                :disabled="isEmpty">
             </div>
             <div>
                 <p>Don't have an account? <router-link to="/signup" >Click here to sign up!</router-link></p>
             </div>
         </nav>
         </div>
-    </body>
+
 </template>
 
 <style>

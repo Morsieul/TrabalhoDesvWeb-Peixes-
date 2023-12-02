@@ -11,9 +11,11 @@ const userStore = useUserStore()
             <input type="text" class="search" name="search" placeholder="Pesquise no site">
             <nav class ="menu"> 
             <div>
-                <!-- <h4 v-if="userStore.user">{{ userStore.user.username }}></h4> -->
-                <router-link to="/login"> Login</router-link>
-                <router-link to="/signup" class = "signup">Sign Up</router-link>
+                <router-link v-if="userStore.user.username" to="/" class="text-white" @click="userStore.logout">{{ userStore.user.username }}</router-link>
+                <div v-else>
+                    <router-link  to="/login"> Login</router-link>
+                    <router-link  to="/signup" class = "signup">Sign Up</router-link>
+                </div>
             </div>
         </nav>
     </header>

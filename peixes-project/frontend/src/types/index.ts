@@ -10,4 +10,12 @@ export type User = {
     id: string,
   description: string,
   rating: number,
-}
+  }
+
+  export type Picture = {
+    id: string,
+    url: string,
+    name: string,
+    description: string,
+    comments: Comment[]
+  }

@@ -2,6 +2,7 @@
 import { useUserStore } from '@/stores/userStore'
 
 const userStore = useUserStore()
+
 </script>
 
 <template>

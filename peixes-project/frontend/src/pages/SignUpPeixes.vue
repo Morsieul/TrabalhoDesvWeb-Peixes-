@@ -12,8 +12,8 @@
                 <input type="password" placeholder="Password" required>
                 <i class='bx bxs-lock' style='color:#920909' ></i>
                 <input type="password" placeholder="Repeat the password" required>
-                <i class='bx bxs-lock' style='color:#920909' ></i>
-                <input type="date" placeholder="Date of birth" required>
+                <!-- <i class='bx bxs-lock' style='color:#920909' ></i>
+                <input type="date" placeholder="Date of birth" required> -->
             </div>
             <div>
                 <button type="submit" class="button">Sign up</button>

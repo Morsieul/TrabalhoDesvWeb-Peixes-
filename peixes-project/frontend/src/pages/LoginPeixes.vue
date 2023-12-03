@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { AxiosError } from 'axios'
+import { isAxiosError } from 'axios'
 import { useRouter } from 'vue-router'
 import { authenticationService} from '@/api/Authentication'
 
@@ -19,11 +19,13 @@ async function authenticate() {
     if(user.role == 'admin') {
       router.push('/admin')
     } else {
+        console.log("Mamao")
       router.push('/')
     }
   } catch (e) {
-    if(e instanceof AxiosError) {
+    if(isAxiosError(e)) {
       console.log(e.response?.data)
+      console.log("Oi oi oi")
       errorMessage.value = e.response?.data.error.message
     } 
   }
@@ -38,6 +40,7 @@ async function authenticate() {
             <div v-if="errorMessage"  class="alert alert-danger" role="alert">
                     {{ errorMessage }}
             </div>
+        <form novalidate @submit.prevent="authenticate" :class="{ 'was-validated': submitted }">
             <div class="input-box">
                 <input
                 v-model="username"
@@ -70,9 +73,9 @@ async function authenticate() {
             <div>
                 <p>Don't have an account? <router-link to="/signup" >Click here to sign up!</router-link></p>
             </div>
-        </nav>
-        </div>
-
+        </form>
+         </nav>
+    </div>
 </template>
 
 <style>

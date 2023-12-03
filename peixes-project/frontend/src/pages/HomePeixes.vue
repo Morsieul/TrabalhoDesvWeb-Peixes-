@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { useUserStore } from '@/stores/userStore'
+import { onMounted } from 'vue'
+import axios from 'axios'
 
 const userStore = useUserStore()
+
+console.log("Melancia",userStore)
 </script>
 
 <template>
@@ -11,7 +15,7 @@ const userStore = useUserStore()
             <input type="text" class="search" name="search" placeholder="Pesquise no site">
             <nav class ="menu"> 
             <div>
-                <router-link v-if="userStore.user.username" to="/" class="text-white" @click="userStore.logout">{{ userStore.user.username }}</router-link>
+                <router-link v-if="userStore.user.username" to="/" class="text-white" >{{ userStore.user.username }}</router-link>
                 <div v-else>
                     <router-link  to="/login"> Login</router-link>
                     <router-link  to="/signup" class = "signup">Sign Up</router-link>

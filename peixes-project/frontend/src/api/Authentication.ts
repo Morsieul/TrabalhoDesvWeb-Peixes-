@@ -10,7 +10,7 @@ class AuthenticationService {
       identifier,
       password
     })
-
+    console.log('data pao', data)
     const user: User = { ...data.user, jwt: data.jwt }
     user.role = await this.getRole(user)
 
@@ -36,4 +36,5 @@ class AuthenticationService {
   }
 }
 
+console.log('AuthenticationService')
 export const authenticationService = new AuthenticationService()

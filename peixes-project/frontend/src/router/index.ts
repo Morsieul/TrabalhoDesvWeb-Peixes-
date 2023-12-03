@@ -5,6 +5,10 @@ import SignUpPeixes from '../pages/SignUpPeixes.vue'
 import HomePeixesUser from '../pages/HomePeixesUser.vue'
 import { useUserStore } from '@/stores/userStore'
 import { api } from '@/api'
+import Error from '../pages/Error/GenericError.vue'
+import NotFound from '@/pages/Error/NotFound.vue'
+import SemPermissao from '@/pages/Error/SemPermissao.vue'
+import ServerError from '@/pages/Error/ServerError.vue'
 
 const routes = [
     {
@@ -23,10 +27,35 @@ const routes = [
       component: SignUpPeixes
     },
     {
-      path: '/user/:id',
+      path: '/user/:username',
       name: 'User',
       component: HomePeixesUser
-    }
+    },
+    {
+      path: '/erroNoServidor',
+      name: '500',
+      component: ServerError,
+    },
+    {
+      path: '/semPermissao',
+      name: '403',
+      component: SemPermissao
+    },
+    {
+      path: '/semPermissao',
+      name: '401',
+      component: SemPermissao
+    },
+    {
+      path: '/notFound',
+      name: '404',
+      component: NotFound
+    },
+    { 
+      path: '/:pathMatch(.*)*', 
+      name: 'error', 
+      component: Error, 
+    },
   ]
 
 export const router = createRouter({

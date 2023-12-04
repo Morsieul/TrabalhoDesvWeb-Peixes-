@@ -6,6 +6,26 @@ import axios from 'axios'
 const userStore = useUserStore()
 
 console.log("Melancia",userStore)
+
+import { api } from '@/api';
+
+const fetchUserData = async (jwt: string) => {
+    // Your code to fetch user data goes here
+}
+
+onMounted(() => {
+
+    try {
+        const jwt = localStorage.getItem('jwt')
+        if(jwt) {
+            fetchUserData(jwt)
+        }
+    } catch (error) {
+        console.error('Erro ao carregar dados do usuário:', error)
+    }
+})
+
+
 </script>
 
 <template>
@@ -15,7 +35,7 @@ console.log("Melancia",userStore)
             <input type="text" class="search" name="search" placeholder="Pesquise no site">
             <nav class ="menu"> 
             <div>
-                <router-link v-if="userStore.user.username" to="/" class="text-white" >{{ userStore.user.username }}</router-link>
+                <router-link v-if="userStore.user.username" to="/" class="text-white">{{ userStore.user.username }}</router-link>
                 <div v-else>
                     <router-link  to="/login"> Login</router-link>
                     <router-link  to="/signup" class = "signup">Sign Up</router-link>

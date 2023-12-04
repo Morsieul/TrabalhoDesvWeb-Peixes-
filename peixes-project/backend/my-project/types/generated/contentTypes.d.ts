@@ -368,12 +368,15 @@ export interface ApiPicturePicture extends Schema.CollectionType {
     singularName: 'picture';
     pluralName: 'pictures';
     displayName: 'Pictures';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     PPictures: Attribute.Media;
+    Title: Attribute.String;
+    Description: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

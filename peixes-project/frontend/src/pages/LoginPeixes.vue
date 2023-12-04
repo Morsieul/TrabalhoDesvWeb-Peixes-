@@ -29,6 +29,18 @@ async function authenticate() {
       errorMessage.value = e.response?.data.error.message
     } 
   }
+
+  async function login() {
+  try {
+    const response = await authenticationService.login(username.value, password.value);
+    // Armazenar o token no Local Storage
+    localStorage.setItem('jwt', response.jwt);
+    router.push('/');
+  } catch (error) {
+    console.error('Erro no login:', error);
+  }
+}
+
 }
 
 </script>

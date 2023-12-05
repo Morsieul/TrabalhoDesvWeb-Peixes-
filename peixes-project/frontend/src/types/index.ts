@@ -18,5 +18,6 @@ export type User = {
     name: string,
     description: string,
     thumbnail ?: string,
+    author: User,
     comments: Comment[]
   }

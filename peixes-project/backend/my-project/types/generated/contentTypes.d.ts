@@ -377,6 +377,13 @@ export interface ApiPicturePicture extends Schema.CollectionType {
     PPictures: Attribute.Media;
     Title: Attribute.String;
     Description: Attribute.String;
+    image_id: Attribute.UID;
+    ban: Attribute.Boolean;
+    users_permissions_user: Attribute.Relation<
+      'api::picture.picture',
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -620,7 +627,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -648,6 +654,11 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'plugin::users-permissions.user',
       'manyToOne',
       'plugin::users-permissions.role'
+    >;
+    pictures: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToMany',
+      'api::picture.picture'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

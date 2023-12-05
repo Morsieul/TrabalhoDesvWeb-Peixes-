@@ -25,6 +25,17 @@
     },
     "Description": {
       "type": "string"
+    },
+    "image_id": {
+      "type": "uid"
+    },
+    "ban": {
+      "type": "boolean"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }

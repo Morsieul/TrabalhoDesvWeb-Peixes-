@@ -9,6 +9,7 @@ import Error from '../pages/Error/GenericError.vue'
 import NotFound from '@/pages/Error/NotFound.vue'
 import SemPermissao from '@/pages/Error/SemPermissao.vue'
 import ServerError from '@/pages/Error/ServerError.vue'
+import ImagePage from '@/pages/ImagePage.vue'
 
 const routes = [
     {
@@ -30,6 +31,12 @@ const routes = [
       path: '/user/:username',
       name: 'User',
       component: HomePeixesUser
+    },
+    {
+      path: '/image/:id',
+      name: 'ImageDetail',
+      component: ImagePage,
+      props: true, // Permite passar o ID como propriedade para o componente
     },
     {
       path: '/erroNoServidor',

@@ -42,7 +42,7 @@ export default {
   </a>
 
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Profile</a></li>
+    <li><router-link class="dropdown-item" :to="{ name: 'User', params: { username: username } }">Profile</router-link></li>
     <li><a class="dropdown-item" @click = "logout"> Log out</a></li>
   </ul>
 </div>

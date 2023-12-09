@@ -34,7 +34,10 @@ const routes = [
     {
       path: '/user/:username',
       name: 'User',
-      component: HomePeixesUser
+      component: {
+      default: HomePeixesUser, 
+      nav: Nav,
+      }
     },
     {
       path: '/image/:id',

@@ -10,12 +10,16 @@ import NotFound from '@/pages/Error/NotFound.vue'
 import SemPermissao from '@/pages/Error/SemPermissao.vue'
 import ServerError from '@/pages/Error/ServerError.vue'
 import ImagePage from '@/pages/ImagePage.vue'
+import Nav from '@/pages/Nav.vue'
 
 const routes = [
     {
        path: '/',
       name: 'home',
-      component: HomePeixes
+      components: {
+        default: HomePeixes,
+        nav: Nav,
+      },
     },
     {
       path: '/login',

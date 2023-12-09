@@ -1,47 +1,11 @@
 <script setup lang="ts">
-import { useUserStore } from '@/stores/userStore'
-import { onMounted } from 'vue'
-import axios from 'axios'
-
-const userStore = useUserStore()
-
-console.log("Melancia",userStore)
-
-import { api } from '@/api';
-
-const fetchUserData = async (jwt: string) => {
-    // Your code to fetch user data goes here
-}
-
-onMounted(() => {
-
-    try {
-        const jwt = localStorage.getItem('jwt')
-        if(jwt) {
-            fetchUserData(jwt)
-        }
-    } catch (error) {
-        console.error('Erro ao carregar dados do usuário:', error)
-    }
-})
+import Nav from '@/pages/Nav.vue';
 
 </script>
 
 <template>
-    <header>
-            <p> Peixies</p>
-            <!-- <img class="img" src="imgs/logo.jpg" alt ="logo do pirata da hora"> -->
-            <input type="text" class="search" name="search" placeholder="Pesquise no site">
-            <nav class ="menu"> 
-            <div>
-                <router-link v-if="userStore.user.username" to="/" class="text-white">{{ userStore.user.username }}</router-link>
-                <div v-else>
-                    <router-link  to="/login"> Login</router-link>
-                    <router-link  to="/signup" class = "signup">Sign Up</router-link>
-                </div>
-            </div>
-        </nav>
-    </header>
+
+   <Nav />
 
     <section class = "Following">
             <h2> Following</h2>
